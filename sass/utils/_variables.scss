@@ -1,0 +1,19 @@
+$mainFont: 'Roboto';
+$secondaryFont: 'Raleway';
+
+:root {
+  --main-text-color: #212121;
+  --secondary-text-color: #757575;
+  --white-text-color: #ffffff;
+  --accent-color: #2196f3;
+  --black-logo-color: #000000;
+  --footer-text-color: rgba(255, 255, 255, 0.6);
+  --white-background-color: #ffffff;
+  --hero-background-color: #2f303a;
+  --team-background-color: #f5f4fa;
+  --bg-active-color: #188ce8;
+  --bg-features-icon: #f5f4fa;
+  --main-icon-color: #afb1b8;
+  --transition-timing-main: cubic-bezier(0.4, 0, 0.2, 1);
+  --bg-gardient: linear-gradient (to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+}

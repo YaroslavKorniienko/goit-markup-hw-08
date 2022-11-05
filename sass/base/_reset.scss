@@ -1,0 +1,53 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.03em;
+  background-color: var(--white-background-color);
+  color: var(--main-text-color);
+}
+body.modal-open {
+  overflow: hidden;
+}
+/*--- убираем точки у списков ---*/
+.list {
+  list-style: none;
+}
+/*--- убираем подчеркивание ссылок ---*/
+.link,
+.logo {
+  text-decoration: none;
+}
+
+/*---кнопки---*/
+.hero-btn,
+.portfolio-btn {
+  font-family: inherit;
+  cursor: pointer;
+}
+/*---глобальный сброс margin, padding */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
