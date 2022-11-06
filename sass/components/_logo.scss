@@ -8,9 +8,23 @@
   text-align: center;
 }
 .navigation__logo {
-  margin-right: 93px;
+  @include mobile {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  @include tablet {
+    padding-top: 26px;
+    padding-bottom: 16px;
+    margin-right: 87px;
+  }
+  @include desktop {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+  }
   padding-top: 24px;
   padding-bottom: 25px;
+  margin-right: 93px;
 }
 .logo__part--black {
   color: var(--black-logo-color);

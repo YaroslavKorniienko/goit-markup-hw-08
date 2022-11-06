@@ -56,11 +56,43 @@
             </a>
           </li>
         </ul>
-        <!--<button type="button" class="menu-open-btn" data-menu-open>
-          <svg>
+        <button type="button" class="menu-open-btn" data-menu-open>
+          <svg class="menu-burger" width="40" height="40">
             <use href="./images/symbol-defs.svg#icon-menu-open"></use>
           </svg>
-        </button>-->
+        </button>
+        <div class="mob-menu flex is-hidden" data-menu>
+          <button class="menu-close-btn" data-menu-close>
+            <svg class="menu-close-btn" width="40" height="40">
+              <use href="./images/symbol-defs.svg#icon-menu-close"></use>
+            </svg>
+          </button>
+          <ul class="mob-menu-list list">
+            <li class="mob-menu-list__item">
+              <a class="mob-menu-list__link link mob-menu-list__link--current" href="./index.html"
+                >Студия</a
+              >
+            </li>
+            <li class="mob-menu-list__item">
+              <a class="mob-menu-list__link link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="mob-menu-list__item">
+              <a class="mob-menu-list__link link" href="">Контакты</a>
+            </li>
+          </ul>
+          <div class="mob-menu-list__down">
+            <a class="mob-menu-list__tell link" href="tel:+380961111111"> +38 096 111 11 11</a>
+            <a class="mob-menu-list__mail link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+            <ul class="mob-menu-list__social list">
+              <li class="mob-menu-list__social-item">Instagram</li>
+              <li class="mob-menu-list__social-item">Twitter</li>
+              <li class="mob-menu-list__social-item">Facebook</li>
+              <li class="mob-menu-list__social-item">LinkedIn</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -108,28 +140,28 @@
           <ul class="work__list list">
             <li class="work__item">
               <img
-                src="./images/img1.jpg"
+                srcset="./images/skills/img.jpg 1x, ./images/skills/img-2x.jpg 2x"
+                src="./images/skills/img.jpg"
                 alt="Програміст працює на робочому столі в офісі"
                 width="370"
-                height="294"
               />
               <p class="work__text">Десктопні додатки</p>
             </li>
             <li class="work__item">
               <img
-                src="./images/img2.jpg"
+                srcset="./images/skills/box.jpg 1x, ./images/skills/box-2x.jpg 2x"
+                src="./images/skills/box.jpg"
                 alt="Дизайнери розробляють додаток для смартфонів, команда творців працює над інтерфейсом мобільних телефонів"
                 width="370"
-                height="294"
               />
               <p class="work__text">Мобільні додатки</p>
             </li>
             <li class="work__item">
               <img
-                src="./images/img3.jpg"
+                srcset="./images/skills/tv.jpg 1x, ./images/skills/tv-2x.jpg 2x"
+                src="./images/skills/tv.jpg"
                 alt="Творчий художник веб-дизайну з робочим графічним планшетом із вибором кольорів"
                 width="370"
-                height="294"
               />
               <p class="work__text">Дизайнерські рішення</p>
             </li>
@@ -142,7 +174,30 @@
           <h2 class="team__title section-title">Наша команда</h2>
           <ul class="team__list list">
             <li class="team__item">
-              <img src="./images/product-designer.jpg" alt="Ігор Дем'яненко" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/ihor-demyanenko-desktop.jpg    1x,
+                    ./images/team/ihor-demyanenko-desktop-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/ihor-demyanenko-tab.jpg    1x,
+                    ./images/team/ihor-demyanenko-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/ihor-demyanenko-mob.jpg    1x,
+                    ./images/team/ihor-demyanenko-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+              </picture>
+              <img src="./images/team/ihor-demyanenko-mob.jpg" width="450" alt="Ігор Дем'яненко" />
               <div class="team-list__workers">
                 <h3 class="team-list__worker">Ігор Дем'яненко</h3>
                 <p class="team-list__job">Product Designer</p>
@@ -179,7 +234,30 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/frontend-developer.jpg" alt="Ольга Рєпіна" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/olha-repina-desktop.jpg    1x,
+                    ./images/team/olha-repina-desktop-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/olha-repina-tab.jpg    1x,
+                    ./images/team/olha-repina-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/olha-repina-mob.jpg    1x,
+                    ./images/team/olha-repina-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+              </picture>
+              <img src="./images/team/olha-repina-mob.jpg" width="450" alt="Ольга Рєпіна" />
               <div class="team-list__workers">
                 <h3 class="team-list__worker">Ольга Рєпіна</h3>
                 <p class="team-list__job">Frontend Developer</p>
@@ -216,7 +294,30 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/marketing.jpg" alt="Микола Тарасов" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/nick-tarasov-desktop.jpg    1x,
+                    ./images/team/nick-tarasov-desktop-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/nick-tarasov-tab.jpg    1x,
+                    ./images/team/nick-tarasov-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/nick-tarasov-mob.jpg    1x,
+                    ./images/team/nick-tarasov-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+              </picture>
+              <img src="./images/team/nick-tarasov-mob.jpg" width="450" alt="Микола Тарасов" />
               <div class="team-list__workers">
                 <h3 class="team-list__worker">Микола Тарасов</h3>
                 <p class="team-list__job">Marketing</p>
@@ -253,7 +354,30 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/ui-designer.jpg" alt="Михайло Єрмаков" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/nick-tarasov-desktop.jpg    1x,
+                    ./images/team/nick-tarasov-desktop-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/nick-tarasov-tab.jpg    1x,
+                    ./images/team/nick-tarasov-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/nick-tarasov-mob.jpg    1x,
+                    ./images/team/nick-tarasov-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+              </picture>
+              <img src="./images/team/michael-ermakov-mob.jpg" alt="Михайло Єрмаков" />
               <div class="team-list__workers">
                 <h3 class="team-list__worker">Михайло Єрмаков</h3>
                 <p class="team-list__job">UI Designer</p>
@@ -500,5 +624,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

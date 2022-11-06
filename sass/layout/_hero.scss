@@ -19,6 +19,9 @@
     (min-resolution: 2dppx) {
     background-image: var(--bg-gardient), url(../images/hero-overlay-mobile-2x.jpg);
   }
+  @include mobile {
+    max-width: 480px;
+  }
   @include tablet {
     max-width: 768px;
     background-image: var(--bg-gardient), url(../images/hero-overlay-tablet.jpg);
@@ -76,7 +79,7 @@
 
 .hero__btn {
   display: inline-block;
-  padding: 10px 32px;
+  padding: 10px 24px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -93,9 +96,7 @@
     background-color: var(--bg-active-color);
     color: var(--white-text-color);
   }
-  @media screen and (min-width: 480px) {
+  @include desktop {
     padding: 10px 32px;
-    font-size: 16px;
-    min-width: 200px;
   }
 }
