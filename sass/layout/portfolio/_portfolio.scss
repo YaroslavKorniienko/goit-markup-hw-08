@@ -1,24 +1,25 @@
 .portfolio-section {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
   @include desktop {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding: 94px 0;
   }
 }
 .portfolio-btn-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  grid-gap: 8px;
-  grid-row-gap: 15px;
+  gap: 8px;
   margin-bottom: 40px;
+  justify-content: left;
+  @media screen and (max-width: 767px) {
+    row-gap: 15px;
+  }
   @include tablet {
-    justify-content: center;
     margin-bottom: 30px;
+    justify-content: center;
   }
   @include desktop {
     margin-bottom: 50px;
+    justify-content: center;
   }
 }
 .portfolio-btn {
@@ -48,50 +49,78 @@
 }
 
 .portfolio-list {
-  display: grid;
-  grid-template-columns: auto;
-  gap: 30px 30px;
-  align-items: stretch;
-  @include mobile {
-    grid-template-columns: auto;
-  }
-  @include tablet {
-    grid-template-columns: auto auto;
-  }
-  @include desktop {
-    grid-template-columns: auto auto auto;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  text-align: left;
 }
 .portfolio-item {
-  /*width: calc((100% - 60px) / 3);*/
-  /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
+  @include mobile {
+    width: 450px;
+  }
+  @include tablet {
+    width: 354px;
+  }
+  @include desktop {
+    width: 370px;
+  }
 }
 .portfolio-container {
   border: 1px solid #eeeeee;
   padding: 20px 24px;
   border-top: 0;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-grow: 1;
+  }
 }
 .portfolio-link {
   display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: var(--transition-timing-main);
   &:hover,
   &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 }
 .portfolio-title {
+  text-align: left;
   margin-bottom: 4px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--main-text-color);
+  @include mobile {
+    font-size: 18px;
+  }
+  @include tablet {
+    font-size: 18px;
+  }
+  @include desktop {
+    font-size: 18px;
+  }
 }
 
 .portfolio-text {
   font-size: 16px;
   line-height: 1.87;
   color: var(--secondary-text-color);
+  @include mobile {
+    font-size: 16px;
+  }
+  @include tablet {
+    font-size: 16px;
+  }
+  @include desktop {
+    font-size: 16px;
+  }
 }
 .portfolio-thumb {
   position: relative;
@@ -102,6 +131,7 @@
   bottom: 0;
   right: 0;
   width: 100%;
+  height: 100%;
   font-size: 18px;
   line-height: 1.56;
   text-align: left;

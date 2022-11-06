@@ -107,8 +107,8 @@
 
 .mob-menu-list__social {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-
   column-gap: 20px;
 }
 
